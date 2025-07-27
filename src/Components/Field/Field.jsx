@@ -1,10 +1,10 @@
 import FieldLayout from './FieldLayout'
 
 
-function Field () {
+function Field ({field, setField, step, currentPlayer }) {
 	return (
 		<>
-		<FieldLayout />
+		<FieldLayout field={field} setField={setField} step={step} currentPlayer={currentPlayer}/>
 		</>
 	)
 }

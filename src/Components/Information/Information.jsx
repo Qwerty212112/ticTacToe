@@ -1,9 +1,11 @@
 import InformationLayout from './InformationLayout'
 
-function Information () {
+
+function Information ({isDraw, setIsDraw, isGameEnded, setIsGameEnded, currentPlayer, setCurrentPlayer}) {
+
 	return (
 		<>
-		<InformationLayout />
+		<InformationLayout isDraw={isDraw} setIsDraw={setIsDraw} isGameEnded={isGameEnded} setIsGameEnded={setIsGameEnded} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer}/>
 		</>
 	)
 }
