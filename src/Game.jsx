@@ -68,7 +68,7 @@ const WIN_PATTERNS = [
     if (el.length > 0) {
       counter= counter + 1
     }
-    if (counter === 9) {
+    if (counter === 9 && !allElementsPresent) {
       setIsDraw(true)
       setIsGameEnded(true)
       
