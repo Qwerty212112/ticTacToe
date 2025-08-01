@@ -24,9 +24,6 @@ function repeat () {
   
 }
 
-
-
-
 function step (useState, index, currentPlayer) {
 
   const WIN_PATTERNS = [
@@ -36,8 +33,6 @@ function step (useState, index, currentPlayer) {
   ];
 
 	const newState = [...useState]
-
-	
 
   if (newState[index] === 'X' || newState[index] === 'O'){
    return 
@@ -79,12 +74,7 @@ function step (useState, index, currentPlayer) {
 	} else {
     setCurrentPlayer('X')
   }
-
-
-
 }
-
-
   return (
     <>
 	<GameLayout field={field} setField={setField} isDraw={isDraw} setIsDraw={setIsDraw} isGameEnded={isGameEnded} setIsGameEnded={setIsGameEnded} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} step={step} repeat={repeat} isButtonDisabled={isButtonDisabled} setIsButtonDisabled={setIsButtonDisabled}></GameLayout>
