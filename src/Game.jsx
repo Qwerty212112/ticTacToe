@@ -36,7 +36,14 @@ const WIN_PATTERNS = [
 ];
 
 	const newState = [...useState]
-	newState[index] = currentPlayer
+
+	
+
+  if (newState[index] === 'X' || newState[index] === 'O'){
+   return 
+  }
+
+  newState[index] = currentPlayer
 	setField(newState)
 
   const result = [];
@@ -54,28 +61,29 @@ const WIN_PATTERNS = [
       theEnd = true
       setIsGameEnded(true)
     }
-  })
-
-	if (currentPlayer === 'X' && theEnd === false) {
-		setCurrentPlayer('O')
-	} else {
-		setCurrentPlayer('X')
-	}
-
-
-  let counter = 0
-  newState.forEach((el) => {
-    if (el.length > 0) {
+      let counter = 0
+      newState.forEach((el) => {
+      if (el) {
       counter= counter + 1
     }
+    })
     if (counter === 9 && !allElementsPresent) {
       setIsDraw(true)
       setIsGameEnded(true)
-      
-
     }
   })
+	if (currentPlayer === 'X' && theEnd === false) {
+		setCurrentPlayer('O')
+	} else if (currentPlayer === 'O' && theEnd === true){
+		setCurrentPlayer('O')
+	} else {
+    setCurrentPlayer('X')
+  }
+
+
+
 }
+
 
   return (
     <>

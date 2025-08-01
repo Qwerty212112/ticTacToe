@@ -1,5 +1,5 @@
 import styles from '../../App.module.css'
-function FieldLayout ({field, step, currentPlayer, isGameEnded, isButtonDisabled, setIsButtonDisabled}) {
+function FieldLayout ({field, step, currentPlayer, isGameEnded, isButtonDisabled}) {
 	return (
 		<>
 			<div className={styles.containerCell}>
